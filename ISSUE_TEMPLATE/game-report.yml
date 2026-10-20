@@ -1,0 +1,53 @@
+name: Game report
+description: A game that doesn't work, works badly, or works perfectly
+labels: ["game report"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! **Please don't attach game files, disc images or anything copyrighted**; they will be deleted.
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      description: Name, version and year if you know them
+      placeholder: Ripper (DOS, 1996)
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Where your copy comes from
+      options: [Original CD or floppies, CD image, GOG, Steam, Other]
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: How did it go?
+      options:
+        - Works perfectly, no changes needed
+        - Works after changes (Fix it for me or settings)
+        - Starts but has problems
+        - Doesn't start
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, what you saw. Screenshots welcome.
+    validations:
+      required: true
+  - type: input
+    id: report
+    attributes:
+      label: Report ID
+      description: If you sent a report from Help > Report a problem, paste its ID
+  - type: input
+    id: system
+    attributes:
+      label: Your system
+      placeholder: Windows 11, FloppyTime 0.1.0
+    validations:
+      required: true

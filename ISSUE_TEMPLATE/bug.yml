@@ -1,0 +1,23 @@
+name: Bug in FloppyTime
+description: Something in the launcher itself is broken (not one specific game)
+labels: ["bug"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Steps to reproduce, what you expected and what you saw
+    validations:
+      required: true
+  - type: input
+    id: report
+    attributes:
+      label: Report ID
+      description: If you sent a report from Help > Report a problem, paste its ID
+  - type: input
+    id: system
+    attributes:
+      label: Your system
+      placeholder: Windows 11, FloppyTime 0.1.0
+    validations:
+      required: true
